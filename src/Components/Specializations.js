@@ -32,19 +32,15 @@ const useStyles = makeStyles(() => ({
     minWidth: 275,
   },
   title: {
-    color: "white",
-  },
-  pos: {
-    marginBottom: 12,
+    fontFamily: "Roboto",
+    marginTop: "30px",
+
   },
   businessPhoto: {
-    marginTop: "100px",
-    marginBottom: "0px",
     minWidth: "50px",
     maxWidth: "400px",
   },
   titleContainer:{
-    minHeight: "100px",
   },
   specializationsCard:{
     backgroundColor: "white",
@@ -60,11 +56,9 @@ export default function Specializations() {
     <Grid item xs={12} className={classes.homeContainer}>
       <Grid container spacing={6} alignItems="center" justify="center" direction="row">  
         <Grid item xs={12} align="center" justify="center" className={classes.titleContainer}>
-          <a id="specializations">
-            <Typography variant="h2" component="h2" gutterBottom className={classes.title}>
+            <Typography m={10} variant="h2" component="h2" className={classes.title}>
               SPECIALIZATIONS
             </Typography>
-          </a>
         </Grid>
 
           <SpecializationCard title="Agriculture" pic="/images/business.png"/>

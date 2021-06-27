@@ -14,9 +14,9 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles(() => ({
   homeContainer: {
     backgroundColor: `#E5E5E5`,
-    height: "100vh",
     width: "100vw",
     backgroundSize: "cover",
+    paddingBottom: "30px"
   },
   homeButton: {
     background: "rgb(100, 100 ,100, 0.5)",
@@ -33,13 +33,16 @@ const useStyles = makeStyles(() => ({
   },
   title: {
     fontFamily: "Roboto",
+    marginTop: "20px",
+    marginBottom: "10px"
+
   },
   businessPhoto: {
     minWidth: "50px",
     maxWidth: "400px",
+    filter: "drop-shadow(3px 3px 3px #222222)"
   },
   titleContainer:{
-    minHeight: "100px",
   },
   aboutCard:{
     backgroundColor: "white",
@@ -55,18 +58,16 @@ export default function About() {
     <Grid item xs={12} className={classes.homeContainer}>
       <Grid container spacing={2} alignItems="center" justify="center" direction="row">  
         <Grid item xs={12} align="center" justify="center" className={classes.titleContainer}>
-        <a id="about">
-          <Typography variant="h2" component="h2" gutterBottom className={classes.title}>
+          <Typography variant="h2" component="h2" className={classes.title}>
             WHO WE ARE
           </Typography>
-        </a>
         </Grid>
 
-        <Grid item xs={6} align="center">
+        <Grid item xs={12} md={6} align="center">
           <img src="/images/business.jpg" alt="image" className={classes.businessPhoto}/><br/>
         </Grid>
 
-        <Grid item xs={6} className={classes.aboutCardContainer}>
+        <Grid item xs={12} md={6} className={classes.aboutCardContainer}>
           <Container>
           <Card className={classes.aboutCard}>
             <CardContent>

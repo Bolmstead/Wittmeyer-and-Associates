@@ -4,21 +4,22 @@ import Home from './Components/Home'
 import About from './Components/About'
 import Specializations from './Components/Specializations'
 import Grid from '@material-ui/core/Grid';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
 
 import { makeStyles } from '@material-ui/core/styles';
 import Routes from './Routes.js'
 
 
 const useStyles = makeStyles(() => ({
-  app: {  
-  }
+
 }));
 
 function App() {
   const classes = useStyles();
 
   return (
-    <div className={classes.app}>
+    <div className="body">
       <Grid container>
         <Home />
         <About />

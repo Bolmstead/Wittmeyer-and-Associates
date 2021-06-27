@@ -20,8 +20,8 @@ const useStyles = makeStyles(() => ({
   },
   overlay: {
     zIndex: 1,
-    height: "100vh",
-    width: "100vw",
+    height: "100%",
+    width: "100%",
     backgroundSize: "cover",
     background: "rgba(0, 0, 0, 0.5)"
   },
@@ -35,14 +35,8 @@ const useStyles = makeStyles(() => ({
   homeButtonLink: {
     textDecoration: "none"
   },
-  root: {
-    minWidth: 275,
-  },
   title: {
     fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
   },
   logo: {
     marginTop: "100px",
@@ -66,9 +60,9 @@ export default function Home() {
             <img src="/images/logoWhite.png" alt="image" className={classes.logo}/><br/>
           </Grid>
 
-          <Grid item>
+          <Grid item xs={12} mb={200}>
             <Grid container spacing={8} justify="center">
-              <Grid item>
+            <Grid item>
                 <a href="#About" className={classes.homeButtonLink}>
                   <Button variant="contained" className={classes.homeButton}>About</Button>
                 </a>

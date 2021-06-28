@@ -14,7 +14,7 @@ import Hidden from "@material-ui/core/Hidden";
 
 
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   aboutContainer: {
     backgroundColor: `#FCFCFC`,
     width: "100vw",
@@ -46,13 +46,21 @@ const useStyles = makeStyles(() => ({
     height: "700px",
 
   },
+  businessPhotoMobile: {
+    width: "100%",
+    backgroundSize: "cover",
+    backgroundImage: `url(/images/business.jpg)`,
+    height: "300px",
+  },
   titleContainer: {},
   aboutCard: {
     backgroundColor: "white",
     borderRadius: "0px",
   },
   aboutText: {
-    marginBottom: "40px"
+    marginBottom: "40px",
+    marginTop: "40px"
+
   },
 }));
 
@@ -63,6 +71,7 @@ export default function About() {
 
   return (
     <Grid item xs={12} className={classes.aboutContainer}>
+          <a id="about">
 
       <Grid
         container
@@ -78,30 +87,42 @@ export default function About() {
           </Grid>
         </Hidden>
 
-        <Grid item xs={12} md={6} className={classes.aboutCardContainer}>
+
+        <Grid item xs={12} md={6} className={classes.aboutCardContainer}         align="center"
+        justify="center">
           <FadeInSection>
-            <Container>
-          <a id="about">
-            <Typography variant="h2" component="h2" className={classes.title}>
-              WHO WE ARE
+          <Container maxWidth="sm">
+          <Typography
+              m={12}
+              variant="h2"
+              component="h2"
+              className={classes.title}
+            >
+              ABOUT
             </Typography>
-          </a>
+
                   <Typography variant="h6" component="h6" className={classes.aboutText}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Lorem ipsum dolor sit amet consectetur. Potenti
-                    nullam ac tortor vitae purus. Nisi est sit amet facilisis
-                    magna. Diam maecenas ultricies mi eget mauris pharetra et
-                    ultrices neque. Elit at imperdiet dui accumsan sit amet
-                    nulla facilisi. Risus commodo viverra maecenas accumsan
-                    lacus vel.
+                    nullam ac tortor vitae purus. 
 
                   </Typography>
 
             </Container>
           </FadeInSection>
         </Grid>
+        <Hidden only={["md", "lg", "xl"]}>
+          <Grid item xs={12} md={6} align="center"         justify="center"
+>
+
+            <FadeInSection>
+              <div className={classes.businessPhotoMobile} />
+            </FadeInSection>
+          </Grid>
+        </Hidden>
       </Grid>
+      </a>
 
     </Grid>
   );

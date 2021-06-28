@@ -1,6 +1,5 @@
 {
   "name": "portfolio",
-  "homepage": "https://bolmstead.github.io/Wittmeyer_and_Associates/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

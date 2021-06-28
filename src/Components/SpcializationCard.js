@@ -13,24 +13,18 @@ const useStyles = makeStyles(() => ({
     borderRadius: "3px",
     filter: "drop-shadow(3px 3px 3px #222222)",
   },
-  title: {
+  cardTitle: {
     marginTop: "110px",
     color: "white",
   },
-  overlay: {
-    zIndex: 1,
-    height: "225px",
-    width: "225px",
-    backgroundSize: "cover",
-    background: "rgba(0, 0, 0, 0.5)",
-  },
+
 }));
 
 export default function Specializations({ title, pic }) {
   const classes = useStyles();
 
   return (
-    <Grid item xs={6} sm={4} md={3} align="center" justify="center">
+    <Grid item sm={6} md={4} align="center" justify="center">
         <Card
           className={classes.specializationsCard}
           align="center"
@@ -40,7 +34,7 @@ export default function Specializations({ title, pic }) {
             backgroundSize: "cover",
           }}
         >
-          <Typography variant="body1" component="p" className={classes.title}>
+          <Typography variant="body1" component="p" className={classes.cardTitle}>
             {title}
           </Typography>
         </Card>

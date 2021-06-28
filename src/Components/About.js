@@ -75,6 +75,8 @@ export default function About() {
 
   return (
     <Grid item xs={12} className={classes.homeContainer}>
+                  <Container maxWidth="lg">
+
       <Grid
         container
         spacing={2}
@@ -127,6 +129,8 @@ export default function About() {
           </FadeInSection>
         </Grid>
       </Grid>
+      </Container>
+
     </Grid>
   );
 }

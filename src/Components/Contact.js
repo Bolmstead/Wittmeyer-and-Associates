@@ -18,7 +18,6 @@ const useStyles = makeStyles(() => ({
     backgroundSize: "cover",
     paddingBottom: "50px",
     paddingTop: "30px",
-
   },
   homeButton: {
     background: "rgb(100, 100 ,100, 0.5)",
@@ -48,6 +47,8 @@ const useStyles = makeStyles(() => ({
     textDecoration: "none",
     color: "black",
   },
+  
+  
 }));
 
 export default function About() {
@@ -61,59 +62,63 @@ export default function About() {
       align="center"
       justify="center"
     >
-    <a id="contact">
-
-      <Grid
-        container
-        spacing={2}
-        alignItems="center"
-        justify="center"
-        direction="row"
-      >
-        <Grid
-          item
-          xs={12}
-          md={6}
-          align="center"
-          justify="center"
-          className={classes.contactContainer}
-        >
-          <a
-            href="https://g.page/idahocapitol?share"
-            className={classes.contactLink}
+      <a id="contact">
+        <Container maxWidth="lg">
+          <Grid
+            container
+            spacing={2}
+            alignItems="center"
+            justify="center"
+            direction="row"
           >
-            <LocationOnIcon className={classes.icon} />
-            <Typography
-              variant="h6"
-              component="h6"
-              className={classes.contact}
+            <Grid
+              item
+              xs={12}
+              md={6}
+              align="center"
+              justify="center"
+              className={classes.contactContainer}
             >
-              700 W JEFFERSON ST. BOISE ID, 83702
-            </Typography>
-          </a>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          align="center"
-          justify="center"
-          className={classes.contactContainer}
-        >
-          <a href="mailto:someone@yoursite.com" className={classes.contactLink}>
-            <MailIcon className={classes.icon} />
-            <Typography
-              variant="h6"
-              component="h6"
-              className={classes.contact}
+              <a
+                href="https://g.page/idahocapitol?share"
+                className={classes.contactLink}
+              >
+                <LocationOnIcon className={classes.icon} />
+                <Typography
+                  variant="h6"
+                  component="h6"
+                  className={classes.contact}
+                >
+                  700 W JEFFERSON ST. BOISE ID, 83702
+                </Typography>
+              </a>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              align="center"
+              justify="center"
+              className={classes.contactContainer}
             >
-              {" "}
-              MURPHY@WITTMEYERASSOCIATES.COM
-            </Typography>
-          </a>
-        </Grid>
-      </Grid>
-    </a>
+              <a
+                href="mailto:someone@yoursite.com"
+                className={classes.contactLink}
+              >
+                <MailIcon className={classes.icon} />
+                <Typography
+                  variant="h6"
+                  component="h6"
+                  className={classes.contact}
+                >
+                  {" "}
+                  MURPHY@WITTMEYERASSOCIATES.COM
+                </Typography>
+              </a>
+            </Grid>
+          </Grid>
+        </Container>
+      </a>
     </Grid>
   );
 }

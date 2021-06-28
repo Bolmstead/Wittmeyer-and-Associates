@@ -36,7 +36,6 @@ const useStyles = makeStyles(() => ({
   title: {
     fontFamily: "Roboto",
     marginTop: "50px",
-    marginBottom: "30px",
     fontWeight: 500,
   },
   businessPhoto: {
@@ -48,6 +47,18 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "white",
     height: "200px",
     width: "200px",
+  },
+  specializationsCard: {
+    backgroundColor: "white",
+    height: "225px",
+    width: "225px",
+    borderRadius: "3px",
+    filter: "drop-shadow(3px 3px 3px #222222)",
+  },
+  cardTitle: {
+    marginTop: "105px",
+    color: "white",
+    fontSize: "19px"
   },
 }));
 
@@ -72,7 +83,7 @@ export default function Specializations() {
             className={classes.titleContainer}
           >
             <Typography
-              m={10}
+              m={12}
               variant="h2"
               component="h2"
               className={classes.title}
@@ -80,25 +91,156 @@ export default function Specializations() {
               EXPERTISE
             </Typography>
           </Grid>
-          <SpecializationCard title="AGRICULTURE" pic="/images/business.png" />
+          <Grid item>
+            <Container maxWidth="md">
+              <Grid
+                container
+                spacing={4}
+                alignItems="center"
+                justify="center"
+                direction="row"
+              >
+                <Grid item xs={12} align="center" justify="center">
+                  <Typography m={12} variant="h6" component="h6">
+                    Our expertise runs the full gamut between government,
+                    business, and the community at large.
+                  </Typography>
+                </Grid>
 
-          <SpecializationCard
-            title="TRANSPORTATION"
-            pic="/images/business.png"
-          />
+                <Grid item sm={6} md={4} align="center" justify="center">
+                  <Card
+                    className={classes.specializationsCard}
+                    align="center"
+                    justify="center"
+                    style={{
+                      backgroundImage: `url(/images/ExpertisePics/Agriculture.jpg)`,
+                      backgroundSize: "cover",
+                    }}
+                  >
+                    <Typography
+                      variant="body1"
+                      component="p"
+                      className={classes.cardTitle}
+                    >
+                      AGRICULTURE
+                    </Typography>
+                  </Card>
+                </Grid>
 
-          <SpecializationCard
-            title="LAW ENFORCEMENT"
-            pic="/images/business.png"
-          />
 
-          <SpecializationCard title="EDUCATION" pic="/images/business.png" />
+                <Grid item sm={6} md={4} align="center" justify="center">
+                  <Card
+                    className={classes.specializationsCard}
+                    align="center"
+                    justify="center"
+                    style={{
+                      backgroundImage: `url(/images/ExpertisePics/Transportation.jpg)`,
+                      backgroundSize: "cover",
+                      boxShadow: "inset 0px 0px 50px black"
+                    }}
+                  >
+                    <Typography
+                      variant="body1"
+                      component="p"
+                      className={classes.cardTitle}
+                    >
+                      TRANSPORTATION
+                    </Typography>
+                  </Card>
+                </Grid>
 
-          <SpecializationCard title="BUSINESS" pic="/images/business.png" />
 
-          <SpecializationCard title="TAX POLICY" pic="/images/business.png" />
+                <Grid item sm={6} md={4} align="center" justify="center">
+                  <Card
+                    className={classes.specializationsCard}
+                    align="center"
+                    justify="center"
+                    style={{
+                      backgroundImage: `url(/images/ExpertisePics/law.jpg)`,
+                      backgroundSize: "cover",
+                      boxShadow: "inset 0px 0px 50px black"
 
-          <SpecializationCard title="FORESTRY" pic="/images/business.png" />
+                    }}
+                  >
+                    <Typography
+                      variant="body1"
+                      component="p"
+                      className={classes.cardTitle}
+                    >
+                      LAW ENFORCEMENT
+                    </Typography>
+                  </Card>
+                </Grid>
+
+
+                <Grid item sm={6} md={4} align="center" justify="center">
+                  <Card
+                    className={classes.specializationsCard}
+                    align="center"
+                    justify="center"
+                    style={{
+                      backgroundImage: `url(/images/ExpertisePics/Education.jpg)`,
+                      backgroundSize: "cover",
+                      boxShadow: "inset 0px 0px 50px black"
+
+                    }}
+                  >
+                    <Typography
+                      variant="body1"
+                      component="p"
+                      className={classes.cardTitle}
+                    >
+                      EDUCATION
+                    </Typography>
+                  </Card>
+                </Grid>
+
+                <Grid item sm={6} md={4} align="center" justify="center">
+                  <Card
+                    className={classes.specializationsCard}
+                    align="center"
+                    justify="center"
+                    style={{
+                      backgroundImage: `url(/images/ExpertisePics/tax.jpg)`,
+                      backgroundSize: "cover",
+                      boxShadow: "inset 0px 0px 50px black"
+
+                    }}
+                  >
+                    <Typography
+                      variant="body1"
+                      component="p"
+                      className={classes.cardTitle}
+                    >
+                      TAX POLICY
+                    </Typography>
+                  </Card>
+                </Grid>
+
+                <Grid item sm={6} md={4} align="center" justify="center">
+                  <Card
+                    className={classes.specializationsCard}
+                    align="center"
+                    justify="center"
+                    style={{
+                      backgroundImage: `url(/images/ExpertisePics/forestry.jpg)`,
+                      backgroundSize: "cover",
+                      boxShadow: "inset 0px 0px 50px black"
+
+                    }}
+                  >
+                    <Typography
+                      variant="body1"
+                      component="p"
+                      className={classes.cardTitle}
+                    >
+                      FORESTRY
+                    </Typography>
+                  </Card>
+                </Grid>
+              </Grid>
+            </Container>
+          </Grid>
         </Grid>
       </a>
     </Grid>

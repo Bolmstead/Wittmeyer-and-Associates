@@ -86,12 +86,15 @@ export default function Home() {
         className={classes.overlay}
       >
         <Grid item xs={12} align="center">
+        <Container maxWidth="lg">
+
           <img
             src="/images/logoWhite.png"
             alt="image"
             className={classes.logo}
           />
           <br />
+          </Container>
         </Grid>
 
         <Hidden only={["xs", "sm"]}>

@@ -12,25 +12,12 @@ import MailIcon from "@material-ui/icons/Mail";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 const useStyles = makeStyles(() => ({
-  aboutContainer: {
-    backgroundColor: `#E5E5E5`,
+  container: {
+    background: "rgb(50, 50 ,50)",
     width: "100vw",
     backgroundSize: "cover",
     paddingBottom: "50px",
     paddingTop: "30px",
-  },
-  homeButton: {
-    background: "rgb(100, 100 ,100, 0.5)",
-    color: "white",
-    width: "200px",
-    height: "50px",
-    borderRadius: "0px",
-  },
-  homeButtonLink: {
-    textDecoration: "none",
-  },
-  root: {
-    minWidth: 275,
   },
   contact: {
     fontFamily: "Roboto",
@@ -45,7 +32,7 @@ const useStyles = makeStyles(() => ({
   },
   contactLink: {
     textDecoration: "none",
-    color: "black",
+    color: "white",
   },
   
   
@@ -58,7 +45,7 @@ export default function About() {
     <Grid
       item
       xs={12}
-      className={classes.aboutContainer}
+      className={classes.container}
       align="center"
       justify="center"
     >

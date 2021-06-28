@@ -10,13 +10,15 @@ import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import "./FadeIn.css";
 import FadeInSection from "./FadeInSection";
+import Hidden from "@material-ui/core/Hidden";
+
+
 
 const useStyles = makeStyles(() => ({
-  homeContainer: {
+  aboutContainer: {
     backgroundColor: `#FCFCFC`,
     width: "100vw",
     backgroundSize: "cover",
-    paddingBottom: "30px",
   },
   homeButton: {
     background: "rgb(100, 100 ,100, 0.5)",
@@ -38,10 +40,10 @@ const useStyles = makeStyles(() => ({
     marginBottom: "40px",
   },
   businessPhoto: {
-    minWidth: "50px",
-    maxWidth: "400px",
-    filter: "drop-shadow(3px 3px 3px #222222)",
-    borderRadius: "3px",
+    width: "100%",
+    backgroundSize: "cover",
+    backgroundImage: `url(/images/business.jpg)`,
+    height: "700px",
 
   },
   titleContainer: {},
@@ -49,71 +51,42 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "white",
     borderRadius: "0px",
   },
+  aboutText: {
+    marginBottom: "40px"
+  },
 }));
 
 export default function About() {
   const classes = useStyles();
-  const [isVisible, setVisible] = useState(false);
-  const domRef = useRef();
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      // In your case there's only one element to observe:
-      if (entries[0].isIntersecting) {
-        // Not possible to set it back to false like this:
-        setVisible(true);
 
-        // No need to keep observing:
-        observer.unobserve(domRef.current);
-      }
-    });
-
-    observer.observe(domRef.current);
-
-    return () => observer.unobserve(domRef.current);
-  }, []);
 
   return (
-    <Grid item xs={12} className={classes.homeContainer}>
-                  <Container maxWidth="lg">
+    <Grid item xs={12} className={classes.aboutContainer}>
 
       <Grid
         container
-        spacing={2}
         alignItems="center"
         justify="center"
         direction="row"
       >
-        <Grid
-          item
-          xs={12}
-          align="center"
-          justify="center"
-          className={classes.titleContainer}
-        >
+        <Hidden only={["xs", "sm"]}>
+          <Grid item xs={12} md={6} align="center">
+            <FadeInSection>
+              <div className={classes.businessPhoto} />
+            </FadeInSection>
+          </Grid>
+        </Hidden>
+
+        <Grid item xs={12} md={6} className={classes.aboutCardContainer}>
+          <FadeInSection>
+            <Container>
           <a id="about">
             <Typography variant="h2" component="h2" className={classes.title}>
               WHO WE ARE
             </Typography>
           </a>
-        </Grid>
-
-        <Grid item xs={12} md={6} align="center" ref={domRef}>
-          <FadeInSection>
-            <img
-              src="/images/business.jpg"
-              alt="image"
-              className={classes.businessPhoto}
-            />
-            <br />
-          </FadeInSection>
-        </Grid>
-
-        <Grid item xs={12} md={6} className={classes.aboutCardContainer}>
-          <FadeInSection>
-            <Container>
-
-                  <Typography variant="h6" component="h6">
+                  <Typography variant="h6" component="h6" className={classes.aboutText}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Lorem ipsum dolor sit amet consectetur. Potenti
@@ -129,7 +102,6 @@ export default function About() {
           </FadeInSection>
         </Grid>
       </Grid>
-      </Container>
 
     </Grid>
   );

@@ -10,6 +10,8 @@ import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import Fade from "@material-ui/core/Fade";
 import Hidden from "@material-ui/core/Hidden";
+import MailIcon from "@material-ui/icons/Mail";
+
 
 const useStyles = makeStyles((theme) => ({
   homeContainer: {
@@ -61,6 +63,18 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "800px",
     width: "100%",
     height: "auto",
+  },
+  icon: {
+    fontSize: 50,
+    color: "white"
+  },
+  contact: {
+    fontFamily: "Roboto",
+    color: "white"
+  },
+  contactLink: {
+    textDecoration: "none",
+    color: "white",
   },
 }));
 
@@ -121,6 +135,17 @@ export default function Home() {
                   </Button>
                 </a>
               </Grid>
+              {/* <Grid item xs={12} align="center" justify="center">
+                <MailIcon className={classes.icon} />
+                  <Typography
+                    variant="h6"
+                    component="h6"
+                    className={classes.contact}
+                  >
+                    {" "}
+                    MURPHY@WITTMEYERASSOCIATES.COM
+                  </Typography>
+                </Grid> */}
             </Grid>
           </Grid>
         </Hidden>
@@ -158,6 +183,18 @@ export default function Home() {
                   </Button>
                 </a>
               </Grid>
+              {/* <Grid item xs={12} align="center" justify="center">
+                <MailIcon className={classes.icon} />
+                  <Typography
+                    variant="h6"
+                    component="h6"
+                    className={classes.contact}
+                  >
+                    {" "}
+                    MURPHY@WITTMEYERASSOCIATES.COM
+                  </Typography>
+                </Grid> */}
+
             </Grid>
           </Grid>
         </Hidden>

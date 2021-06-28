@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import NavigationBar from './Components/NavigationBarHome'
 import Home from './Components/Home'
 import About from './Components/About'
+import Press from './Components/Press'
 import Specializations from './Components/Specializations'
 import Contact from './Components/Contact'
 import Grid from '@material-ui/core/Grid';
@@ -37,6 +38,7 @@ function App() {
       <Grid container>
         <Home />
         <About />
+        <Press />
         <Specializations />
         <Contact />
       </Grid>

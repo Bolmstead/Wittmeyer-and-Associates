@@ -98,7 +98,7 @@ export default function About() {
               component="h2"
               className={classes.title}
             >
-              ABOUT
+              WHO WE ARE
             </Typography>
 
                   <Typography variant="h6" component="h6" className={classes.aboutText}>

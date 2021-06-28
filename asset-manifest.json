@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Wittmeyer_and_Associates/static/css/main.4a975530.chunk.css",
+    "main.js": "/Wittmeyer_and_Associates/static/js/main.ee8dedcf.chunk.js",
+    "main.js.map": "/Wittmeyer_and_Associates/static/js/main.ee8dedcf.chunk.js.map",
+    "runtime-main.js": "/Wittmeyer_and_Associates/static/js/runtime-main.661cdbd6.js",
+    "runtime-main.js.map": "/Wittmeyer_and_Associates/static/js/runtime-main.661cdbd6.js.map",
+    "static/js/2.97260b58.chunk.js": "/Wittmeyer_and_Associates/static/js/2.97260b58.chunk.js",
+    "static/js/2.97260b58.chunk.js.map": "/Wittmeyer_and_Associates/static/js/2.97260b58.chunk.js.map",
+    "static/js/3.1fa8b6b6.chunk.js": "/Wittmeyer_and_Associates/static/js/3.1fa8b6b6.chunk.js",
+    "static/js/3.1fa8b6b6.chunk.js.map": "/Wittmeyer_and_Associates/static/js/3.1fa8b6b6.chunk.js.map",
+    "index.html": "/Wittmeyer_and_Associates/index.html",
+    "static/css/main.4a975530.chunk.css.map": "/Wittmeyer_and_Associates/static/css/main.4a975530.chunk.css.map",
+    "static/js/2.97260b58.chunk.js.LICENSE.txt": "/Wittmeyer_and_Associates/static/js/2.97260b58.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.661cdbd6.js",
+    "static/js/2.97260b58.chunk.js",
+    "static/css/main.4a975530.chunk.css",
+    "static/js/main.ee8dedcf.chunk.js"
+  ]
+}
